@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5-CSS-JS</title>
+<style>
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+  background-color:#fafafa;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-top:50px;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .25em 0 .75em;
+}
+
+table tr {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th, table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+table td img { text-align: center; }
+@media screen and (max-width: 600px) {
+
+table { border: 0; }
+
+table caption { font-size: 1.3em; }
+
+table thead { display: none; }
+
+table tr {
+  border-bottom: 3px solid #ddd;
+  display: block;
+  margin-bottom: .625em;
+}
+
+table td {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  font-size: .8em;
+  text-align: right;
+}
+
+table td:before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table td:last-child { border-bottom: 0; }
+}
+	#fila{width:100%;margin-top: 20px;margin-left: 40%;margin-right: 40%;}
+	#col1{float: left; line-height: 180px;}
+	#col2{float: left; line-height: 180px;}
+	#col3{float: left; line-height: 180px;}
+</style>
+</head>
+
+<body>
+
+<table>
+  <caption>
+  Características de los Bombillos
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Bombilla</th>
+      <th scope="col">Potencia(W)</th>
+      <th scope="col">Consumo(Kw></th>
+      <th scope="col">Precio(D&oacute;lares)</th>
+	  <th scope="col">Longevidad(horas)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row" data-label="Bombilla">Led</td>
+      <td data-label="Potencia(W)">7</td>
+      <td data-label="Consumo(Kw)">0,006</td>
+      <td data-label="Precio(D&oacute;lares)">12</td>
+	  <td data-label="Longevidad(horas)">25,000/9años</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Bombilla">Incandescente</td>
+      <td data-label="Potencia(W)">60</td>
+      <td data-label="Consumo(Kw)">0,09</td>
+      <td data-label="Precio(D&oacute;lares)">3</td>
+	  <td data-label="Longevidad(horas)">4,000/1.4años</td>
+   
+  </tbody>
+</table>
+
+
+<div id="fila">
+	<div id="col1"><button onclick="document.getElementById('miImagen').src='pic_bulbon.gif'">Luz Apagada</button></div>
+	<div id="col2"><img id="miImagen" src="pic_bulboff.gif" style="width:100px"></div>
+	<div id="col3"><button onclick="document.getElementById('miImagen').src='pic_bulboff.gif'">Luz Encendida</button></div>
+</div>
+</body>
+</html>
+
+  
